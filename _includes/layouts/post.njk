@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-meta">
+      {% if date %} <time datetime="{{ date }}">{{ date | date("MMMM D, YYYY") }}</time> {% endif %}
+      {% if author %} • By {{ author }} {% endif %}
+      {% if subsystem %} • {{ subsystem }} {% endif %}
+    </p>
+    {% if cover_image %}
+      <img class="post-cover" src="{{ cover_image }}" alt="Cover image for {{ title }}">
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  {% if tags %}
+  <footer class="post-footer">
+    <p class="tags">Tags: 
+      {% for tag in tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </p>
+  </footer>
+  {% endif %}
+</article>
