@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or "Parikramaka" }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/static/images/logo-mark.svg" alt="Parikramaka Logo" height="40" />
+      <h1>Parikramaka</h1>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/archive/">Archive</a>
+      <a href="/subsystems/">Subsystems</a>
+      <a href="/personas/">Personas</a>
+      <a href="/resources/">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <p>© {{ "now" | date("YYYY") }} Parikramaka — Orbiting Ideas. Launching Dreams.</p>
+  </footer>
+</body>
+</html>
