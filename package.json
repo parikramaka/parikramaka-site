@@ -1,0 +1,12 @@
+{
+  "name": "parikramaka-site",
+  "version": "1.0.0",
+  "description": "Parikramaka Club Website - Eleventy + Netlify CMS",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
